@@ -1,0 +1,179 @@
+{
+  "user": {
+    "name": "Jeremias Santos Lima",
+    "id": "uihs6658223",
+    "avatar": "averiguar#########"
+  },
+  "newletters": [
+    {
+      "id": "news1",
+      "title": "Viage melhor",
+      "image": "AVERIGUAR########"
+    },
+    {
+      "id": "news2",
+      "title": "Peneus Carecas?",
+      "image": "AVERIGUAR########"
+    },
+    {
+      "id": "news3",
+      "title": "Diga sim ao descanso",
+      "image": "AVERIGUAR########"
+    }
+  ],
+  "orders": [
+    {
+      "numberOrder": "AAA5555",
+      "vehicle": "gdf-6555",
+      "driver": "Paco",
+      "origin": "Cidade Origin",
+      "destination": "Cidade de Destino",
+      "stateOrigin": "Estado de Saida",
+      "stateDestination": "Estado de Chegada",
+      "statusOrder": {
+        "statusTracking": "Viajando",
+        "startOfTrip": "22/02/2021 22:00:01",
+        "endOfTrip": null,
+        "positionActual": "-lat, -long",
+        "updateAt": "22/02/2021 23:00:01",
+        "occurrence": null,
+        "descriptionOcurrence": null,
+        "proof":"link comprovante"
+      },
+      "items": [
+        {
+          "id": "xpto1",
+          "product": "smartphone",
+          "quantity": "30",
+          "unit": "unidade"
+        },
+        {
+          "id": "xpto2",
+          "product": "smartphone",
+          "quantity": "25",
+          "unit": "unidade"
+        },
+        {
+          "id": "xpto3",
+          "product": "headphone",
+          "quantity": "50",
+          "unit": "unidade"
+        },
+        {
+          "id": "xpto4",
+          "product": "pen drive",
+          "quantity": "320",
+          "unit": "unidades"
+        },
+        {
+          "id": "xpto5",
+          "product": "cartão de memoria",
+          "quantity": "10",
+          "unit": "caixas"
+        }
+      ]
+    },
+    {
+        "numberOrder": "BBB6666",
+        "vehicle": "XXS-1122",
+        "driver": "JOSÉ",
+        "origin": "Cidade Origem",
+        "destination": "Cidade de Destino",
+        "stateOrigin": "Estado de Saida",
+        "stateDestination": "Estado de Chegada",
+        "statusOrder": {
+          "statusTracking": "Viajando",
+          "startOfTrip": "22/02/2021 22:00:01",
+          "endOfTrip": null,
+          "positionActual": "-lat, -long",
+          "updateAt": "22/02/2021 23:00:01",
+          "occurrence": null,
+          "descriptionOcurrence":"Local estava fechada",
+          "proof":"link comprovante"
+        },
+        "items": [
+          {
+            "id": "xpto1",
+            "product": "smartphone",
+            "quantity": "30",
+            "unit": "unidade"
+          },
+          {
+            "id": "xpto2",
+            "product": "smartphone",
+            "quantity": "25",
+            "unit": "unidade"
+          },
+          {
+            "id": "xpto3",
+            "product": "headphone",
+            "quantity": "50",
+            "unit": "unidade"
+          },
+          {
+            "id": "xpto4",
+            "product": "pen drive",
+            "quantity": "320",
+            "unit": "unidades"
+          },
+          {
+            "id": "xpto5",
+            "product": "cartão de memoria",
+            "quantity": "10",
+            "unit": "caixas"
+          }
+        ]
+      },
+      {
+        "numberOrder": "CCC9999",
+        "vehicle": "XXS-1122",
+        "driver": "JOSÉ",
+        "origin": "Cidade Origem",
+        "destination": "Cidade de Destino",
+        "stateOrigin": "Estado de Saida",
+        "stateDestination": "Estado de Chegada",
+        "statusOrder": {
+          "statusTracking": "Viajando",
+          "startOfTrip": "22/02/2021 22:00:01",
+          "endOfTrip": "23/02/2021 15:00:01",
+          "positionActual": "-lat, -long",
+          "updateAt": "22/02/2021 23:00:01",
+          "occurrence": null,
+          "descriptionOcurrence": null,
+          "proof":"link comprovante"
+        },
+        "items": [
+          {
+            "id": "xpto1",
+            "product": "smartphone",
+            "quantity": "30",
+            "unit": "unidade"
+          },
+          {
+            "id": "xpto2",
+            "product": "smartphone",
+            "quantity": "25",
+            "unit": "unidade"
+          },
+          {
+            "id": "xpto3",
+            "product": "headphone",
+            "quantity": "50",
+            "unit": "unidade"
+          },
+          {
+            "id": "xpto4",
+            "product": "pen drive",
+            "quantity": "320",
+            "unit": "unidades"
+          },
+          {
+            "id": "xpto5",
+            "product": "cartão de memoria",
+            "quantity": "10",
+            "unit": "caixas"
+          }
+        ]
+      }
+  ]
+}
