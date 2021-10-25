@@ -1,7 +1,7 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, {useState} from "react";
+import { StyleSheet, Text, View, Dimensions, useColorScheme } from "react-native";
 import AppLoading from "expo-app-loading";
+import { ThemeProvider } from "styled-components";
 
 import {
   useFonts,
@@ -14,6 +14,10 @@ import {
   Montserrat_700Bold,
   Montserrat_900Black,
 } from "@expo-google-fonts/montserrat";
+import light from './theme/light';
+import dark from './theme/dark';
+
+import Login from "./screens/Login";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,40 +29,16 @@ export default function App() {
     Montserrat_900Black,
   });
 
+  const device = useColorScheme();
+  const [thema, setThema] = useState(false);
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
+    
     return (
-      <View style={styles.container}>
-        <Text style={{ fontFamily: "Inter_400Regular" }}>
-          Open up App.js to start working on your app!
-        </Text>
-        <Text style={{ fontFamily: "Inter_700Bold" }}>
-          Open up App.js to start working on your app!
-        </Text>
-        <Text style={{ fontFamily: "Inter_900Black" }}>
-          Open up App.js to start working on your app!
-        </Text>
-        <Text style={{ fontFamily: "Montserrat_400Regular" }}>
-          Open up App.js to start working on your app!
-        </Text>
-        <Text style={{ fontFamily: "Montserrat_700Bold" }}>
-          Open up App.js to start working on your app!
-        </Text>
-        <Text style={{ fontFamily: "Montserrat_900Black" }}>
-          Open up App.js to start working on your app!
-        </Text>
-        <StatusBar style="auto" />
-      </View>
+      <ThemeProvider theme={thema ? dark : light} >
+          <Login />
+      </ThemeProvider>
     );
   }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+};
