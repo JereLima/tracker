@@ -12,6 +12,9 @@ import {
   Inter_400Regular,
 } from "@expo-google-fonts/inter";
 import Login from "./screens/Login";
+import Home from "./screens/Home";
+import { StatusBar } from "expo-status-bar";
+import { Platform } from "react-native";
 
 export default function App() {
 
@@ -26,7 +29,9 @@ export default function App() {
   } else {
     return (
       <ThemeProvider theme={light}>
-        <Login />
+        
+      <StatusBar style="dark"  />
+        <Home />
       </ThemeProvider>
     );
   }

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Platform, Image} from "react-native";
-import styled from "styled-components/native";
+import { Container, Forms, RecoveryPassword, RecoveryPasswordText} from './styled';
 import { Button, Input, Spacing } from '../../components';
 
 export default function Login({theme}) {
@@ -15,6 +15,7 @@ export default function Login({theme}) {
       <Image source={require('../../../assets/logo.png')} width={120} resizeMode="contain" />
       <Forms>
         <Input
+          keyboardType="email-address"
           onChangeText={(text) => setEmail(text)}
           placeholder="Email"
           returnKeyType="next"
@@ -22,6 +23,7 @@ export default function Login({theme}) {
           onSubmitEditing={() => passwordRef.current.focus()}/>
         <Spacing />
         <Input
+          secureTextEntry={true}
           onChangeText={(text) => setPassword(text)}
           placeholder="Senha"
           inputRef={passwordRef}
@@ -38,29 +40,3 @@ export default function Login({theme}) {
     </Container>
   );
 }
-
-const Container = styled.KeyboardAvoidingView`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  background-color: #eeee;
-`;
-const Forms = styled.View`
-  width: 95%;
-  align-self: center;
-`;
-const Text = styled.Text`
-color: ${props => props.theme.colors.secondary};
-font-family: ${props => props.theme.fonts.interRegular};;
-`;
-const RecoveryPassword = styled.TouchableOpacity`
-  width: 50%;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-`;
-const RecoveryPasswordText = styled.Text`
-  font-size: 16px;
-  color: ${({theme}) => theme.colors.primary };
-  font-family: ${({theme}) => theme.fonts.interBold};
-`;

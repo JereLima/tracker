@@ -12,12 +12,16 @@ export default function Input({
   onSubmitEditing,
   returnKeyType,
   autoFocus,
-  placeholderTextColor
+  placeholderTextColor,
+  keyboardType,
+  secureTextEntry
 }) {
   
  return (
    <Container>
        <TextInput
+        secureTextEntry={secureTextEntry}
+        keyboardType={keyboardType}
         autoFocus={autoFocus}
         onChangeText={onChangeText}
         value={value}

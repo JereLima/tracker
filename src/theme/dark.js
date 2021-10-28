@@ -1,12 +1,14 @@
 export const dark = {
     colors:{
-        background: '#F8F9FA',
-        primary: '#304269',
+        background: '#304269',
+        primary: '#F26101',
         secondary: '#F26101',
         danger: '#cc0000',
         succes: '#8cb369',
-        input: '#eeee',
-        white: '#f9f9f9'
+        bgInput: '#485E8F',
+        placeholderText: '#bbb',
+        font: '#304269',
+        colorTextButton:'#f9f9f9'
     },
     fonts: {
         interBlack:"Inter_900Black",
