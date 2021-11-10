@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
-import Swiper from 'react-native-swiper'
+import {Carroussel} from '../../components';
 
 
 export default function Home() {
@@ -15,20 +15,7 @@ export default function Home() {
                 <Name>Jeremias</Name>
             </WrapperText>
        </Header>
-        <News>
-            <SwiperContainer>
-            <SwiperItem>
-            <SwiperText>Text 1</SwiperText>
-            </SwiperItem>
-            <SwiperItem>
-            <SwiperText>Text 2</SwiperText>
-            </SwiperItem>
-            <SwiperItem>
-            <SwiperText>Text 3</SwiperText>
-            </SwiperItem>
-      </SwiperContainer>
-        </News>
-       
+       <Carroussel />
        <Favorites>Favorites</Favorites>
        <FavoritesList></FavoritesList>
        <EmpityFavorites>Nada por aqui no momento</EmpityFavorites>
@@ -42,22 +29,6 @@ const Container = styled(SafeAreaView)`
 `;
 const Header = styled.View`
     flex-direction: row;
-`;
-const News = styled.View`
-    height: 30%;
-    width: 100%;
-    background-color: black;
-`;
-const SwiperContainer = styled(Swiper)`
-    background-color: pink;
-    padding: 10px;
-`;
-const SwiperItem = styled.View`
-    border-radius: 5px;
-    background-color: blue;
-    align-self: center;
-`;
-const SwiperText = styled.Text`
 `;
 
 const Logo = styled.Image`
