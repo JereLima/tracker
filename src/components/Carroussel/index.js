@@ -5,7 +5,6 @@ import styled from 'styled-components/native';
 import { widthDevice } from '../../theme/metrics';
 
 export default function Carroussel() {
-    const myWidth = Dimensions.get('window').width;
 
     const news = [
         {id:1, title: 'Cargas no brasil', link: 'www.teste.com.br'},
@@ -25,6 +24,7 @@ export default function Carroussel() {
    <Container>
        <FlatListComponent
             scrollEnabled
+            showsHorizontalScrollIndicator={false}
             horizontal
             data={news}
             keyExtractor={(item) => item.id}
@@ -35,19 +35,19 @@ export default function Carroussel() {
 }
 
 const Container = styled.View`
-    width: 100%;
-    height: 100px;
-    background-color: blueviolet;
+    width: 90%;
     justify-content: center;
     align-items: center;
+    align-self: center;
 `;
-const Items = styled.View`
-    width: 200px;
-    height: 50px;
+const Items = styled.TouchableOpacity`
+    width: ${widthDevice - 100}px;
+    height: ${widthDevice / 3}px;
     background-color: black;
-    margin: 5px;
+    margin-left: 10px;
+    align-self: center;
+    border-radius: 10px;
 `;
 const Title = styled.Text``;
 const FlatListComponent = styled(FlatList)`
-    background-color: greenyellow;
 `;

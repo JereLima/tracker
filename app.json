@@ -3,14 +3,6 @@
     "name": "tracker",
     "slug": "tracker",
     "version": "1.0.0",
-    "ios": {
-      "bundleIdentifier": "com.tracker",
-      "buildNumber": "1.0.0"
-    },
-    "android": {
-      "package": "com.tracker",
-      "versionCode": 1
-    },
     "assetBundlePatterns": [
       "**/*"
     ]
