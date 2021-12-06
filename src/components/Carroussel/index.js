@@ -1,21 +1,22 @@
 import React from 'react';
-import { View, Dimensions } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
-import styled from 'styled-components/native';
-import { widthDevice } from '../../theme/metrics';
+import { Container, Items, AreaTitle, Image, Title, FlatListComponent} from './styles';
 
 export default function Carroussel() {
 
-    const news = [
-        {id:1, title: 'Cargas no brasil', link: 'www.teste.com.br'},
-        {id:2, title: 'Carga Pesada', link: 'www.teste.com.br'},
-        {id:3, title: 'Novidades pelo Mundo', link: 'www.teste.com.br'},
+    const data = [
+      {id: 1, title: 'Desafios Diários', image: require('../../images/porto.jpeg')},
+      {id: 2, title: 'Vamos usar tecnologia?', image: require('../../images/porto2.jpeg')},
+      {id: 3, title: 'A inovação já começou', image: require('../../images/truck.jpeg')},
     ]
 
-    const RenderItems = () => {
+    const RenderItems = ({data}) => {
+      console.log(data)
         return(
           <Items>
-            <Title>Teste um</Title>
+            <Image resizeMode="cover" source={data.image}/>
+            <AreaTitle>
+              <Title>{data.title}</Title>
+            </AreaTitle>
         </Items>  
         )
     };
@@ -26,28 +27,10 @@ export default function Carroussel() {
             scrollEnabled
             showsHorizontalScrollIndicator={false}
             horizontal
-            data={news}
+            data={data}
             keyExtractor={(item) => item.id}
-            renderItem={({item, index}) => <RenderItems data={item, index}/> }
+            renderItem={({item}) => <RenderItems data={item}/> }
        />
    </Container>
   );
 }
-
-const Container = styled.View`
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-`;
-const Items = styled.TouchableOpacity`
-    width: ${widthDevice - 100}px;
-    height: ${widthDevice / 3}px;
-    background-color: black;
-    margin-left: 10px;
-    align-self: center;
-    border-radius: 10px;
-`;
-const Title = styled.Text``;
-const FlatListComponent = styled(FlatList)`
-`;

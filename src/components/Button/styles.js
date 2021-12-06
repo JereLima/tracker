@@ -6,13 +6,13 @@ export const Container = styled.TouchableOpacity.attrs({
     height: 60px;
     width: 100%;
     border-radius: 3px;
-    background-color: ${({ theme}) => theme.colors.primary};
+    background-color: ${({ theme}) => theme.colors.secondary};
     justify-content: center;
     align-items: center;
 `;
 export const Text = styled.Text`
     font-size: 18px;
     color: ${({ theme }) => theme.colors.colorTextButton};
-    font-family: ${({ theme }) => theme.fonts.interBold};
+    font-family: ${({ theme }) => theme.fonts.bold};
 `;
 

@@ -1,27 +1,25 @@
 import React, { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import Stack from "../src/navigation/StackNavigation";
 import AppLoading from "expo-app-loading";
 import styled from "styled-components/native";
 import { ThemeProvider } from "styled-components";
 import { dark } from "./theme/dark";
 import { light } from "./theme/light";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import {
   useFonts,
-  Inter_900Black,
-  Inter_700Bold,
-  Inter_400Regular,
-} from "@expo-google-fonts/inter";
-import Login from "./screens/Login";
-import Home from "./screens/Home";
-import { StatusBar } from "expo-status-bar";
-import { Platform } from "react-native";
+  Sen_400Regular,
+  Sen_700Bold,
+  Sen_800ExtraBold,
+} from "@expo-google-fonts/sen";
 
 export default function App() {
-
   const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_700Bold,
-    Inter_900Black,
+    Sen_400Regular,
+    Sen_700Bold,
+    Sen_800ExtraBold,
   });
 
   if (!fontsLoaded) {
@@ -29,9 +27,11 @@ export default function App() {
   } else {
     return (
       <ThemeProvider theme={light}>
-        
-      <StatusBar style="dark"  />
-        <Home />
+        <SafeAreaProvider>
+          <NavigationContainer>
+            <Stack />
+          </NavigationContainer>
+        </SafeAreaProvider>
       </ThemeProvider>
     );
   }

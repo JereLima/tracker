@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
 import {Carroussel, CardOrder} from '../../components';
 import db from '../../db.json'
 
 
-export default function Home() {
+export default function Home({navigation}) {
  return (
    <Container>
        <Header>
@@ -18,12 +18,12 @@ export default function Home() {
        </Header>
        <Carroussel />
        <Favorites>Favoritas</Favorites>
-       <FavoritesList>
-           {db.orders.map((item, index) => (
-               <CardOrder key={index} data={item} />
-           ))}
-       </FavoritesList>
-       <EmpityFavorites>Nenhuma nota favorita nesse momento....{'\n'}Vamos buscar?</EmpityFavorites>
+       <FlatList
+        data={db.orders}
+        keyExtractor={(item) => item.numberOrder}
+        renderItem={({item}) => <CardOrder data={item} />}
+        />
+       {/* <EmpityFavorites>Nenhuma nota favorita nesse momento....{'\n'}Vamos buscar?</EmpityFavorites> */}
    </Container>
   );
 }
@@ -48,25 +48,26 @@ const WrapperText = styled.View`
 `;
 const Hello = styled.Text`
     font-size: 30px;
-    font-family: ${({ theme }) => theme.fonts.interBold};
+    font-family: ${({ theme }) => theme.fonts.bold};
     color: ${({ theme }) => theme.colors.font};
 
 `;
 const Name = styled.Text`
     font-size: 30px;
-    font-family: ${({ theme }) => theme.fonts.interBold};
+    font-family: ${({ theme }) => theme.fonts.bold};
     color: ${({ theme }) => theme.colors.font};
 `;
 const Favorites = styled.Text`
     padding-left: 15px;
-    font-family: ${({ theme }) => theme.fonts.interBold};
+    font-family: ${({ theme }) => theme.fonts.bold};
     font-size: 30px;
     color: ${({ theme }) => theme.colors.font};
     margin-top: 5%;
+    margin-bottom: 10px;
 `;
 const FavoritesList = styled.View``;
 const EmpityFavorites = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.interBold};
+    font-family: ${({ theme }) => theme.fonts.bold};
     color: ${({ theme }) => theme.colors.font};
     align-self: center;
     margin-top: 10%;

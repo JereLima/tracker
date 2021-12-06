@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
+import { useNavigation } from '@react-navigation/native'
 import { Platform, Image} from "react-native";
 import { Container, Forms, RecoveryPassword, RecoveryPasswordText} from './styled';
 import { Button, Input, Spacing } from '../../components';
 
 export default function Login({theme}) {
+  const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -31,7 +33,7 @@ export default function Login({theme}) {
           onSubmitEditing={() => alert('hshshs')}
           />
         <Spacing />
-        <Button title="Entrar"/>
+        <Button onPress={() => navigation.navigate('Tab')} title="Entrar"/>
       </Forms>
       <Spacing height={50} />
       <RecoveryPassword>

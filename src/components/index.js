@@ -1,13 +1,15 @@
-import Input from "./Input";
 import Button from "./Button";
-import Spacing from "./Spacing";
-import Carroussel from "./Carroussel";
 import CardOrder from "./CardOrder";
+import Carroussel from "./Carroussel";
+import Header from "./Header"
+import Input from "./Input";
+import Spacing from "./Spacing";
 
 export {
-    Input,
     Button,
-    Spacing,
-    Carroussel,
     CardOrder,
+    Carroussel,
+    Header,
+    Input,
+    Spacing,
 }

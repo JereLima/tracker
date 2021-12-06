@@ -12,7 +12,7 @@ export const Forms = styled.View`
 `;
 export const Text = styled.Text`
 color: ${props => props.theme.colors.secondary};
-font-family: ${props => props.theme.fonts.interRegular};;
+font-family: ${props => props.theme.fonts.regular};;
 `;
 export const RecoveryPassword = styled.TouchableOpacity`
   width: 50%;
@@ -23,5 +23,5 @@ export const RecoveryPassword = styled.TouchableOpacity`
 export const RecoveryPasswordText = styled.Text`
   font-size: 16px;
   color: ${({theme}) => theme.colors.font };
-  font-family: ${({theme}) => theme.fonts.interBold};
+  font-family: ${({theme}) => theme.fonts.bold};
 `;
