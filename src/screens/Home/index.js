@@ -72,6 +72,3 @@ const EmpityFavorites = styled.Text`
     align-self: center;
     margin-top: 10%;
 `;
-
-// const FavoritesList = styled.View``;
-// const FavoritesList = styled.View``;

@@ -7,6 +7,7 @@ import {
   Column,
   Status,
   OrderNumber,
+  Origin,
   ContainerPosition,
   TextLocation,
   ContainerProducts,
@@ -41,15 +42,16 @@ export default function OrderDetails() {
   const ocurrence = item.statusOrder.occurrence;
   const descripition = item.statusOrder.descriptionOccurrence;
   const proof = item.statusOrder.proof;
+  const position = item.statusOrder.positionActual;
 
   const products = item.products;
 
   console.log(ocurrence, descripition);
 
   return (
-    <Scroll>
-      <Container>
-        <Header title="Pedidos" />
+    <Container>
+      <Header title="Pedidos" />
+      <Scroll>
         <Spacing height={10} />
         <ContainerItem style={shadow.primary}>
           {status === "Viajando" ? (
@@ -60,28 +62,27 @@ export default function OrderDetails() {
             <Ocurrence width={52} height={52} fill={colorIcon} />
           )}
           <Column>
-            <Status>212121</Status>
-            <OrderNumber>23235235</OrderNumber>
+            <Status>{status}</Status>
+            <OrderNumber>{item.numberOrder}</OrderNumber>
+            <Origin>{item.origin}</Origin>
+            <Origin>{item.destination}</Origin>
+
           </Column>
         </ContainerItem>
         <Spacing height={10} />
         <ContainerPosition style={shadow.primary}>
           <Location width={52} height={41} fill={colorIcon} />
-          <TextLocation>Última posição</TextLocation>
+          <TextLocation>{position}</TextLocation>
         </ContainerPosition>
         <Spacing height={10} />
         <ContainerProducts style={shadow.primary}>
           <TitleProducts>Produtos do pedido</TitleProducts>
-          <FlatList
-            data={products}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <Products>
-                Cód: {item.id} {item.product}
-                {"\n"}Quantidade:{item.quantity} {item.unit}
-              </Products>
-            )}
-          />
+          {products.map((item, index) => (
+            <Products key={index}>
+              Cód: {item.id} {item.product}
+              {"\n"}Quantidade:{item.quantity} {item.unit}
+            </Products>
+          ))}
         </ContainerProducts>
 
         {proof !== null ? (
@@ -110,7 +111,7 @@ export default function OrderDetails() {
           </ContainerOcurrence>
         ) : null}
         <Spacing height={10} />
-      </Container>
-    </Scroll>
+      </Scroll>
+    </Container>
   );
 }

@@ -10,7 +10,9 @@ export const Scroll = styled.ScrollView`
 export const ContainerItem = styled.View`
   padding-left: 15px;
   width: 95%;
-  height: 75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 75px;
   align-self: center;
   flex-direction: row;
   align-items: center;
@@ -27,6 +29,11 @@ export const Status = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 export const OrderNumber = styled.Text`
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.secondary};
+  font-family: ${({ theme }) => theme.fonts.bold};
+`;
+export const Origin = styled.Text`
   font-size: 18px;
   color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.bold};
@@ -50,10 +57,10 @@ export const TextLocation = styled.Text`
 export const ContainerProducts = styled.View`
   background-color: ${({ theme }) => theme.colors.primary};
   width: 95%;
-  height: 250px;
   align-self: center;
   border-radius: 3px;
   padding: 15px 0px;
+  margin-bottom: 10px;
 `;
 export const FlatList = styled.FlatList`
   flex: 1;
