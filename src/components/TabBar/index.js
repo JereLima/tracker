@@ -1,37 +1,15 @@
 import React, {useContext} from 'react';
-import styled from 'styled-components/native';
 //Icon
 import HomeIcon from '../../images/icons/home.svg';
 import SearchIcon from '../../images/icons/search.svg';
 import PersonIcon from '../../images/icons/person.svg';
-
-
-export const TabArea = styled.View`
-  height: 60px;
-  background-color: ${({theme}) => theme.colors.tabBar};
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-`;
-export const TabItem = styled.TouchableOpacity`
-  width: 50px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-`;
-export const TabItemCenter = styled.TouchableOpacity`
-  width: 70px;
-  background-color: #f0f0f0;
-  height: 70px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-  bottom: 30px;
-  border: 3px solid #4eadbe;
-`;
+import { useTheme } from 'styled-components';
+import { TabArea, TabItem} from './styles'
 
 const TabBar = ({state, navigation}) => {
+  const theme = useTheme();
+  const colorIcon = theme.colors.secondary;
+  const off = '#aaa';
 
   const goTo = (screenName) => {
     navigation.navigate(screenName);
@@ -41,21 +19,21 @@ const TabBar = ({state, navigation}) => {
       <TabItem onPress={() => goTo('Home')}>
         <HomeIcon
           width="30"
-          fill={state.index === 0 ? '#f0f0f0' : '#fff9'}
+          fill={state.index === 0 ? colorIcon : off}
         />
       </TabItem>
 
       <TabItem onPress={() => goTo('Search')}>
         <SearchIcon
           width="30"
-          fill={state.index === 1 ? '#f0f0f0' : '#fff9'}
+          fill={state.index === 1 ? colorIcon : off}
         />
       </TabItem>
 
       <TabItem onPress={() => goTo('Profile')}>
         <PersonIcon
           width="30"
-          fill={state.index === 2 ? '#f0f0f0' : '#fff9'}
+          fill={state.index === 2 ? colorIcon : off}
         />
       </TabItem>
     </TabArea>

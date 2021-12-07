@@ -12,7 +12,7 @@ export const Container = styled.TouchableOpacity.attrs({
 `;
 export const Text = styled.Text`
     font-size: 18px;
-    color: ${({ theme }) => theme.colors.colorTextButton};
+    color: white;
     font-family: ${({ theme }) => theme.fonts.bold};
 `;
 

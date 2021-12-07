@@ -15,13 +15,13 @@ export const Container = styled.TouchableOpacity`
 export const Title = styled.Text`
     font-size: 22px;
     font-family: ${({theme}) => theme.fonts.bold };
-    color: ${({theme}) => theme.colors.font };
+    color: ${({theme}) => theme.colors.secondary };
 
 `;
 export const Order = styled.Text`
     font-size: 18px;
     font-family: ${({theme}) => theme.fonts.bold };
-    color: ${({theme}) => theme.colors.font };
+    color: ${({theme}) => theme.colors.secondary };
 `;
 
 export const Column = styled.View`

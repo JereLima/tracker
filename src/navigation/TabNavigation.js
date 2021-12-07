@@ -19,7 +19,7 @@ export default function TabNavigation() {
     headerLeft: () => (
       <Backbutton
         height={30}
-        fill={theme.colors.icons}
+        fill={theme.colors.secondary}
         onPress={() => navigation.goBack()}
       />
     ),

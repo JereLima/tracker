@@ -49,26 +49,26 @@ const WrapperText = styled.View`
 const Hello = styled.Text`
     font-size: 30px;
     font-family: ${({ theme }) => theme.fonts.bold};
-    color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme }) => theme.colors.secondary};
 
 `;
 const Name = styled.Text`
     font-size: 30px;
     font-family: ${({ theme }) => theme.fonts.bold};
-    color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme }) => theme.colors.secondary};
 `;
 const Favorites = styled.Text`
     padding-left: 15px;
     font-family: ${({ theme }) => theme.fonts.bold};
     font-size: 30px;
-    color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme }) => theme.colors.secondary};
     margin-top: 5%;
     margin-bottom: 10px;
 `;
 const FavoritesList = styled.View``;
 const EmpityFavorites = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold};
-    color: ${({ theme }) => theme.colors.font};
+    color: ${({ theme }) => theme.colors.secondary};
     align-self: center;
     margin-top: 10%;
 `;

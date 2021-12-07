@@ -40,7 +40,7 @@
         "descriptionOcurrence": null,
         "proof": "link comprovante"
       },
-      "items": [
+      "products": [
         {
           "id": "xpto1",
           "product": "smartphone",
@@ -70,6 +70,24 @@
           "product": "cartão de memoria",
           "quantity": "10",
           "unit": "caixas"
+        },
+        {
+          "id": "xpto6",
+          "product": "cartão de memoria",
+          "quantity": "10",
+          "unit": "caixas"
+        },
+        {
+          "id": "xpto7",
+          "product": "cartão de memoria",
+          "quantity": "10",
+          "unit": "caixas"
+        },
+        {
+          "id": "xpto8",
+          "product": "cartão de memoria",
+          "quantity": "10",
+          "unit": "caixas"
         }
       ]
     },
@@ -91,7 +109,7 @@
         "descriptionOcurrence": null,
         "proof": "link comprovante"
       },
-      "items": [
+      "products": [
         {
           "id": "xpto1",
           "product": "smartphone",
@@ -142,7 +160,7 @@
         "descriptionOcurrence": null,
         "proof": "link comprovante"
       },
-      "items": [
+      "products": [
         {
           "id": "xpto1",
           "product": "smartphone",
@@ -193,7 +211,7 @@
         "descriptionOcurrence": null,
         "proof": "link comprovante"
       },
-      "items": [
+      "products": [
         {
           "id": "xpto1",
           "product": "smartphone",
@@ -244,7 +262,7 @@
         "descriptionOcurrence": null,
         "proof": "link comprovante"
       },
-      "items": [
+      "products": [
         {
           "id": "xpto1",
           "product": "smartphone",

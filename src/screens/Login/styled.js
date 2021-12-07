@@ -22,6 +22,6 @@ export const RecoveryPassword = styled.TouchableOpacity`
 `;
 export const RecoveryPasswordText = styled.Text`
   font-size: 16px;
-  color: ${({theme}) => theme.colors.font };
+  color: ${({theme}) => theme.colors.secondary };
   font-family: ${({theme}) => theme.fonts.bold};
 `;

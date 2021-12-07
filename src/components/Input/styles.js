@@ -1,4 +1,3 @@
-import { PixelRatio } from "react-native";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -16,5 +15,5 @@ export const TextInput = styled.TextInput.attrs(({theme}) => ({
 }))`
 font-family: ${({ theme }) => theme.fonts.bold};
 font-size: 18px;
-color: ${({ theme }) => theme.colors.font};
+color: ${({ theme }) => theme.colors.secondary};
 `;
