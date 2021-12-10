@@ -10,7 +10,6 @@ export default function Carroussel() {
     ]
 
     const RenderItems = ({data}) => {
-      console.log(data)
         return(
           <Items>
             <Image resizeMode="cover" source={data.image}/>

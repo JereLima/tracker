@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 //Icon
 import HomeIcon from '../../images/icons/home.svg';
 import SearchIcon from '../../images/icons/search.svg';

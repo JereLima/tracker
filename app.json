@@ -3,7 +3,8 @@
     "name": "tracker",
     "slug": "tracker",
     "version": "1.0.0",
-    "assetBundlePatterns": ["**/*"]
+    "assetBundlePatterns": ["**/*"],
+    "userInterfaceStyle": "automatic"
   },
   "name": "tracker",
   "packagerOpts": {

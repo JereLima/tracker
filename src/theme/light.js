@@ -3,6 +3,7 @@ export const light = {
         background: '#F8F9FA',
         primary: '#FFFFFF',
         secondary: '#304269',
+        button: '#304269',
         danger: '#cc0000',
         succes: '#8cb369',
         placeholderText: '#bbb',

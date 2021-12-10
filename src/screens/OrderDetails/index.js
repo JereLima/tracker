@@ -46,8 +46,6 @@ export default function OrderDetails() {
 
   const products = item.products;
 
-  console.log(ocurrence, descripition);
-
   return (
     <Container>
       <Header title="Pedidos" />

@@ -2,15 +2,12 @@ export const dark = {
     colors:{
         background: '#304269',
         primary: '#485E8F',
-        secondary: '#F26101',
+        secondary: '#F7F9FA',
+        button: '#F26101',
         danger: '#cc0000',
         succes: '#8cb369',
-        bgInput: '#485E8F',
-        placeholderText: '#bbb',
-        font: '#F7F9FA',
-        colorTextButton:'#f9f9f9',
-        icons: '#F7F9FA',
-        tabBar: '#304269',
+        placeholderText: '#F7F9FA',
+        colorTextButton:'#FFFFFF',
         bottomInput:'#F26101'
     },
     fonts: {

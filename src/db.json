@@ -2,7 +2,13 @@
   "user": {
     "name": "Jeremias Santos Lima",
     "id": "uihs6658223",
-    "avatar": "averiguar#########"
+    "avatar": "https://avatars.githubusercontent.com/u/69019443?s=400&u=5c73b134b225719d09a5236ef6451571c2629f5c&v=4",
+    "email": "jere@jere.com",
+    "stores":[
+      {"id": 1, "store": "Loja 1", "city":"Campinas-SP"},
+      {"id": 2, "store": "Loja 2", "city":"Valinhos-SP"},
+      {"id": 3, "store": "Loja 3", "city":"São Paulo-SP"}
+    ]
   },
   "newletters": [
     {
