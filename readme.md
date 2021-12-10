@@ -10,10 +10,8 @@ Olá esse é um projeto de estudos, cujo o objetivo era trabalhar com temas din�
 - Icones SVG
 
 ## Para rodar ai...
-
-    Baixar o projeto e usar expo start
-
-    Ah..... vc pode ver que apesar de ser um projeto expo, temos aqui as pastas nativas, pois foi usado Expo Bare Workflow
+  Baixar o projeto e usar expo start
+  Ah..... vc pode ver que apesar de ser um projeto expo, temos aqui as pastas nativas, pois foi usado Expo Bare Workflow
 
 ## Screenshots
 
